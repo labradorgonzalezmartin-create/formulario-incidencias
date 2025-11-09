@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Incidencias</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    form { max-width: 400px; margin: auto; }
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button { background-color: #007BFF; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <h2>Formulario de Incidencias Técnicas</h2>
+  <form action="http://localhost:5678/webhook/registro-incidencia" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <textarea name="descripcion" placeholder="Descripción del problema" required></textarea>
+    <input type="date" name="fecha" required>
+    <button type="submit">Enviar incidencia</button>
+  </form>
+</body>
+</html>
